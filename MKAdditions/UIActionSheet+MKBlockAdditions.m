@@ -7,6 +7,7 @@
 //
 
 #import "UIActionSheet+MKBlockAdditions.h"
+#import "UIApplication+ApplicationDimension.h"
 
 static DismissBlock _dismissBlock;
 static CancelBlock _cancelBlock;

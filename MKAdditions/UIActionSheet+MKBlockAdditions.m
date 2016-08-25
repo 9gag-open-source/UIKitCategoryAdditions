@@ -134,7 +134,7 @@ static UIViewController *_presentVC;
         editedImage = (UIImage*) [info valueForKey:UIImagePickerControllerOriginalImage];
     
     _photoPickedBlock(editedImage);
-	[picker dismissModalViewControllerAnimated:YES];	
+    [picker dismissViewControllerAnimated:YES completion:nil];
 	[picker autorelease];
 }
 
@@ -142,7 +142,7 @@ static UIViewController *_presentVC;
 + (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     // Dismiss the image selection and close the program
-    [_presentVC dismissModalViewControllerAnimated:YES];    
+    [_presentVC dismissViewControllerAnimated:YES completion:nil];
 	[picker autorelease];
     [_presentVC release];
     _cancelBlock();

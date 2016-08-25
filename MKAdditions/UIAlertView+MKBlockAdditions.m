@@ -142,7 +142,7 @@ static char WILL_CANCEL_IDENTIFER;
     else
     {
         if (alertView.dismissBlock) {
-            alertView.dismissBlock(buttonIndex - 1); // cancel button is button 0
+            alertView.dismissBlock((int)buttonIndex - 1); // cancel button is button 0
         }
     }
 }
@@ -158,7 +158,7 @@ static char WILL_CANCEL_IDENTIFER;
     else
     {
         if (alertView.willDismissBlock) {
-            alertView.willDismissBlock(buttonIndex - 1); // cancel button is button 0
+            alertView.willDismissBlock((int)buttonIndex - 1); // cancel button is button 0
         }
     }
 }
